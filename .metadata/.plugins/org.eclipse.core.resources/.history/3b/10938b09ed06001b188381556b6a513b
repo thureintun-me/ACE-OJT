@@ -1,0 +1,9 @@
+package shop;
+
+public class Ford extends Car {
+	
+	private int year;
+	private int manufacturerDiscount;
+	
+
+}

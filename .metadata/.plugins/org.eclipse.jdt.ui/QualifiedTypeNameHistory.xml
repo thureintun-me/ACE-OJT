@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<qualifiedTypeNameHistroy>
+    <fullyQualifiedTypeName name="oop.Vehicle"/>
+    <fullyQualifiedTypeName name="oop.Cars"/>
+    <fullyQualifiedTypeName name="oop.Bikes"/>
+    <fullyQualifiedTypeName name="oop.MotorBikes"/>
+    <fullyQualifiedTypeName name="java.lang.Override"/>
+    <fullyQualifiedTypeName name="shop.Sedan"/>
+    <fullyQualifiedTypeName name="shop.Ford"/>
+    <fullyQualifiedTypeName name="shop.Car"/>
+</qualifiedTypeNameHistroy>
