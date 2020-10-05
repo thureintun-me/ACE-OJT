@@ -1,0 +1,9 @@
+package shop;
+
+public class Truck extends Car {
+	
+	
+	
+	
+
+}
