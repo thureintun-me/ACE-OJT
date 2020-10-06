@@ -14,10 +14,11 @@ public class Truck extends Car {
 	@Override
 	public double getSalePrice() {
 		if(weight > 2000) {
-			return super.getSalePrice()-(super.getSalePrice()*0.1);
+			return super.getSalePrice()*0.9;
 					
 		}else {
-			return super.getSalePrice()-(super.getSalePrice()*0.2);
+			return super.getSalePrice()*0.8;
+				
 		}
 		
 	}
