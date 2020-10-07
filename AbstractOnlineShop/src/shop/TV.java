@@ -6,6 +6,7 @@ public class TV extends Electronics {
 	
 	public TV(int size,String manufacturer,double regularPrice) {
 		super(manufacturer,regularPrice);
+		this.size=size;
 		
 	}
 	
