@@ -2,6 +2,8 @@ package shop;
 
 public class TV extends Electronics {
 	
+
+
 	private int size;
 	
 	public TV(int size,String manufacturer,double regularPrice) {

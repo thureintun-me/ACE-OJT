@@ -36,8 +36,13 @@ public class Main {
 		
 		
 		for(Map.Entry<String, Product> p : pMap.entrySet()) {
-			if(p.getValue().getPdCode().equals(inPdCode)) {
+			/*
+			 * if(p.getValue().getPdCode().equals(inPdCode)) { System.out.println(p); }
+			 */
+			
+			if(p.getKey().equals(inPdCode)) {
 				System.out.println(p);
+				
 			}
 			
 		}
