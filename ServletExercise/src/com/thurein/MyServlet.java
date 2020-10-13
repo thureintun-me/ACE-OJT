@@ -29,6 +29,14 @@ public class MyServlet extends HttpServlet {
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		
+	
+		
+	}
+
+	/**
+	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
+	 */
+	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		String name = request.getParameter("name");
 		String dob = request.getParameter("dob");
 		String gender = request.getParameter("gender");
@@ -41,15 +49,7 @@ public class MyServlet extends HttpServlet {
 		out.println("Gender : " + gender);
 		for(int i=0;i<course.length;i++) {
 			out.println("subject " + (i+1)+" : " + course[i] );
-		}
 	}
-
-	/**
-	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
-	 */
-	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		// TODO Auto-generated method stub
-		doGet(request, response);
 	}
 
 }
