@@ -1,0 +1,50 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://xmlns.jcp.org/jsf/html"
+	xmlns:f="http://xmlns.jcp.org/jsf/core"
+	xmlns:ui="http://java.sun.com/jsf/facelets">
+<h:head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<title>(LGN001)login</title>
+	<h:outputStylesheet name="/stylesheets/base.css" />
+	<h:outputStylesheet name="/stylesheets/container.css" />
+	<h:outputScript library="javascript" name="accordion-menu.js"
+		target="head" />
+	<h:outputScript library="javascript" name="general.js" target="head" />
+	<script type="text/javascript">
+		window.history.forward();
+		function noBack() {
+			window.history.forward();
+		}
+	</script>
+
+</h:head>
+<h:body class="main_body">
+	
+	<ui:insert name="header">
+		<ui:include src="/header.xhtml"></ui:include>
+	</ui:insert>
+	
+		<div id="container">
+			<div id="left_menu">
+				<!-- menu html code exist the menu function of general.js -->
+			</div>
+			<div id="main_contents">
+				<div id="contents">
+					<h4 style="color: brown;">
+						Welcome...!<br /> <br /> This is the final exam project of the
+						Java Web Development Course.
+					</h4>
+				</div>
+
+			</div>
+
+		</div>
+
+		<div class="footer">
+			<span>Copyright &#169; ACE Inspiration 2016</span>
+		</div>
+</h:body>
+</html>

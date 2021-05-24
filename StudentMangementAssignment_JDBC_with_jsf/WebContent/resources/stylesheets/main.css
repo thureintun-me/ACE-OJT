@@ -1,0 +1,299 @@
+@charset "UTF-8";
+
+#header {
+	background: #3E5151;
+	background: -webkit-linear-gradient(to right, #DECBA4, #3E5151);
+	background: linear-gradient(to right, #DECBA4, #3E5151);
+	width: 100%;
+	height: 90px;
+	top: 0;
+	position: relative;
+	color: white;
+	float: top;
+}
+
+#title {
+	position: relative;
+	float: left;
+	top: 20px;
+	left: 70px;
+	font-size: 30px;
+	width: 450px;
+}
+
+#title a {
+	color: white;
+}
+
+#menuLoginTime {
+	position: absolute;
+	float: left;
+	top: 10px;
+	left: 530px;
+	width: 450px;
+	margin-top: 10px;
+}
+
+#menuUpdateTime {
+	position: absolute;
+	float: left;
+	top: 60px;
+	left: 530px;
+	width: 450px;
+}
+
+
+.ui-panelgrid td{
+	background: #3E5151;
+	background: -webkit-linear-gradient(to right, #DECBA4, #3E5151);
+	background: linear-gradient(to right, #DECBA4, #3E5151);
+	color:white !important;
+	
+}
+
+.panelGridCenter{
+	
+	margin:0 auto;
+	
+}
+.ui-panelmenu-header {
+	background-color: #40514e !important;
+}
+.ui-panelmenu-content{
+	color:red;
+}
+
+.ui-menuitem {
+	background: #3E5151 !important;
+	background: -webkit-linear-gradient(to right, #DECBA4, #3E5151) !important;
+	background: linear-gradient(to right, #DECBA4, #3E5151) !important;
+	color: white;
+	font-style: italic !important;
+}
+.ui-menuitem-text{
+	color:white;
+}
+
+div.footer {
+	background: #3E5151; background : -webkit-linear-gradient( to right,
+	#DECBA4, #3E5151); background : linear-gradient( to right, #DECBA4,
+	#3E5151);
+	text-align: center;
+	color: white;
+	float: bottom;
+	height: 20px;
+	background: -webkit-linear-gradient(to right, #DECBA4, #3E5151);
+	background: linear-gradient(to right, #DECBA4, #3E5151);
+}
+
+.ui-layout-unit-content {
+	background: #3E5151; /* fallback for old browsers */
+	background: -webkit-linear-gradient(to right, #DECBA4, #3E5151);
+	/* Chrome 10-25, Safari 5.1-6 */
+	background: linear-gradient(to right, #DECBA4, #3E5151);
+	/* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+.inputbox {
+	width: 250px;
+	margin-left: 10px;
+	background-color: blue;
+	border-radius: 9px;
+}
+
+.buttonsave {
+	border-radius: 9px;
+}
+
+.p-datepicker ui-calendar {
+	width: 250px !important;
+	border-radius: 9px !important;
+}
+
+.ui-inputfield {
+	color: pink;
+}
+
+body {
+	width: 100%;
+	height: 950px;
+	margin: 0px 0px 0px 0px;
+	background-color: #252528;
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	font-family: "Oswald", sans-serif;
+	font-size: 14px;
+	font-weight: 300;
+	background: #6D6027; /* fallback for old browsers */
+	background: -webkit-linear-gradient(to right, #D3CBB8, #6D6027);
+	/* Chrome 10-25, Safari 5.1-6 */
+	background: linear-gradient(to right, #D3CBB8, #6D6027);
+	/* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+/*===================================Header/NavBar===================================*/
+.dashboardHeader {
+	display: block;
+	position: fixed;
+	top: 0px;
+	width: 100%;
+	height: 56px;
+	margin: 0px;
+	z-index: 1;
+	text-align: center;
+	background-color: #252528;
+	color: #CCCCCC;
+	border-bottom: 15px solid #D44040;
+}
+
+.navBar ul {
+	margin: 12px 0px 0px 0px;
+	padding: 0px;
+	cursor: pointer;
+}
+
+.navBar li {
+	display: inline;
+	font-size: 24px;
+	text-decoration: underline;
+	padding-left: 4px;
+	padding-right: 5px;
+}
+
+.navBar li:hover {
+	color: white;
+}
+
+.navBar li:nth-child(1) {
+	border-right: 2px solid #D44040;
+}
+
+.navBar li:nth-child(2) {
+	border-right: 2px solid #D44040;
+}
+/*===================================Content Body===================================*/
+.contentBody {
+	width: 1147px;
+	height: 750px;
+	display: block;
+	background-color: white;
+	background-color: hsla(0, 50%, 100%, 0.2);
+	box-shadow: 1px 3px 8px black;
+	margin-top: 61px;
+	margin-left: auto;
+	margin-right: auto;
+	margin-bottom: 35px;
+	text-align: center;
+}
+
+.pageDescription {
+	width: 100%;
+	font-size: 20px;
+	text-align: center;
+	padding-top: 2px;
+	padding-bottom: 2px;
+}
+
+.pageDescription h2 {
+	margin-top: 10px;
+	margin-bottom: 5px;
+	font-weight: 400;
+	color: white;
+	text-shadow: 2px 2px 0px black;
+}
+
+.userSearchForm {
+	margin-left: 26.5px;
+}
+
+.userSearchBox {
+	float: left;
+	width: 100%;
+	min-height: 700px;
+	max-height: 900px;
+	background: #3E5151;
+	background: -webkit-linear-gradient(to right, #DECBA4, #3E5151);
+	background: linear-gradient(to right, #DECBA4, #3E5151);
+	color: white;
+}
+
+.userSearchBoxHeader {
+	float: left;
+	width: 100%;
+	height: 35px;
+	background-color: #D44040;
+	color: white;
+	text-align: center;
+}
+
+.userSearchBoxHeader h4 {
+	font-size: 21px;
+	font-weight: 300;
+	margin-top: 2px;
+	margin-bottom: 0px;
+	text-shadow: 2px 2px 0px black;
+}
+
+
+
+.userSearchSelect {
+	float: left;
+	width: 85px;
+	margin: 10px 5px 0px 5px;
+	text-align: left;
+}
+
+#userSearchButton {
+	float: left;
+	width: 72px;
+	height: 32px;
+	margin: 25px 5px 0px 5px;
+	background-color: #D44040;
+	border-color: #D44040;
+	border-radius: 5px 5px 5px 5px;
+	font-family: "Oswald", sans-serif;
+	font-size: 15px;
+	color: white;
+}
+
+#userSearchButton:hover {
+	background-color: #D66060;
+	border-color: #D66060;
+}
+
+.userSearchBox table {
+	float: left;
+	color: black;
+	margin: 30px 0px 0px 50px;
+	font-weight: 300;
+}
+
+tbody div {
+	overflow-y: scroll;
+	height: 200px;
+}
+
+.scrollTable table {
+	width: 100%;
+	margin: 0px;
+}
+
+.userSearchBox table th {
+	color: white;
+	font-weight: 300;
+	width: 140px;
+}
+
+.scrollTable table td {
+	width: 143.8px;
+}
+
+.userSearchBox table a {
+	color: #D44040;
+	text-decoration: underline;
+	font-weight: 300;
+}
+
+.userSearchBox table a:hover {
+	color: black;
+	cursor: pointer;
+}

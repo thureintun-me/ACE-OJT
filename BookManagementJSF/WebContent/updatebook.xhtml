@@ -1,0 +1,59 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://xmlns.jcp.org/jsf/html"
+	xmlns:f="http://xmlns.jcp.org/jsf/core">
+<h:head>
+	<title>Edit Your Book</title>
+	<h:outputStylesheet name="/css/bootstrap.min.css" />
+</h:head>
+<h:body>
+	<h:form id="form" class="form-horizontal">
+		<div class="form-group">
+			<div class="col-sm-2"></div>
+			<h2 style="text-align: center" class="col-sm-4">Edit Your Book</h2>
+		</div>
+		<hr />
+		<div class="form-group">
+			<h:outputLabel for="code" class="control-label col-sm-2">Book Code</h:outputLabel>
+			<div class="col-sm-4">
+				<h:inputText id="code" value="#{editBook.bookCode}"
+					class="form-control" />
+			</div>
+		</div>
+		<div class="form-group">
+			<h:outputLabel for="title" class="control-label col-sm-2">Book
+Title</h:outputLabel>
+			<div class="col-sm-4">
+				<h:inputText id="title" value="#{editBook.bookTitle}"
+					class="form-control" />
+			</div>
+		</div>
+		<div class="form-group">
+			<h:outputLabel for="author" class="control-label col-sm-2">Book
+Author</h:outputLabel>
+			<div class="col-sm-4">
+				<h:inputText id="author" value="#{editBook.bookAuthor}"
+					class="form-control" />
+			</div>
+		</div>
+		<div class="form-group">
+			<h:outputLabel for="price" class="control-label col-sm-2">Book
+Price</h:outputLabel>
+			<div class="col-sm-4">
+				<h:inputText id="price" value="#{editBook.bookPrice}"
+					class="form-control" />
+			</div>
+		</div>
+		<div class="form-group">
+			<div class="col-sm-2"></div>
+			<div class="col-sm-4">
+				<center>
+					<h:commandButton value="Update" action="#{book.update(editBook)}"
+						class="btn btn-primary" style="width: 80px;"></h:commandButton>
+				</center>
+			</div>
+		</div>
+	</h:form>
+</h:body>
+</html>

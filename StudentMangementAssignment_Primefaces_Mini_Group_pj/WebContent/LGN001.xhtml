@@ -1,0 +1,73 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:p="http://primefaces.org/ui"
+	xmlns:ui="http://java.sun.com/jsf/facelets">
+<h:head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<title>(LGN001)login</title>
+	<h:outputStylesheet name="/stylesheets/base.css" />
+	<h:outputStylesheet name="/stylesheets/container.css" />
+	<h:outputScript library="javascript" name="accordion-menu.js" />
+	<h:outputScript library="javascript" name="accordion-menu.js" />
+	<h:outputStylesheet name="/stylesheets/bootstrap.min.css" />
+	<script type="text/javascript">
+		window.history.forward();
+		function noBack() {
+			window.history.forward();
+		}
+	</script>
+	<style>
+body {
+	background: #3E5151;
+	background: -webkit-linear-gradient(to right, #DECBA4, #3E5151);
+	background: linear-gradient(to right, #DECBA4, #3E5151);
+}
+</style>
+</h:head>
+
+<h:body class="main_body" onload="noBack();"
+	onpageshow="if (event.persisted) noBack();" onunload="">
+
+
+	<div id="login">
+		<div class="modal-dialog modal-dialog-centered" >
+			<div class="modal-content form-wrapper" style="	background: #3E5151;
+	background: -webkit-linear-gradient(to right, #DECBA4, #3E5151);
+	background: linear-gradient(to right, #DECBA4, #3E5151);">
+
+				<div class="container-fluid mt-5">
+					<h:form action="{{route('login')}}" method="post" id="LoginForm">
+						<div class="form-group text-center">
+							<h2 style="font-weight:bold;color:#465755;">Student Registration</h2>
+						</div>
+						<div class="form-group" style="position: relative;">
+							<p:outputLabel for="userId" value="User ID" />
+							<p:inputText id="userId" value="#" class="form-control mb-1" style="background:#eaeaea;"/>
+
+						</div>
+						<div class="form-group pb-3" style="position: relative;">
+							<p:outputLabel for="pass" value="Password" />
+							<p:password id="pass" value="#" class="form-control mb-1" style="background:#eaeaea;" />
+
+						</div>
+						<div class="form-group pt-2">
+							<p:commandButton value="login" update="LoginForm" action="#"
+								class="btn  form-control" style="background: #40514e;color:#d8c6a1;" icon=" pi pi-check" />
+						</div>
+					</h:form>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- end of container -->
+
+	<div class="footer">
+		<span>Copyright &#169; ACE Inspiration 2016</span>
+	</div>
+
+</h:body>
+</html>

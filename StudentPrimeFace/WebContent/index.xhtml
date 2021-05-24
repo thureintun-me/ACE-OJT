@@ -1,0 +1,45 @@
+<html xmlns="http://www.w3.org/1999/xhtml"
+    xmlns:h="http://java.sun.com/jsf/html"
+    xmlns:f="http://java.sun.com/jsf/core"
+    xmlns:p="http://primefaces.org/ui">
+     
+    <h:head>
+    </h:head>
+ 
+    <h:body>
+    	<h:form>    
+    
+ 	 <div class="ui-fluid">
+        <div class="p-field p-grid">
+            <p:outputLabel for="studentId" styleClass="p-col-12 p-md-2" value="StudentID" />
+            <div class="p-col-12 p-md-10">
+                <p:inputText id="studentId" />
+            </div>
+        </div>
+        <div class="p-field p-grid">
+            <p:outputLabel for="studentName" styleClass="p-col-12 p-md-2" value="StudentName" />
+            <div class="p-col-12 p-md-10">
+                <p:inputText id="studentName" />
+            </div>
+        </div>
+    </div>
+  
+  <p:outputLabel for="@next" value="Editable: " />
+        <p:selectOneMenu id="city" value="#{selectOneMenuView.city}" effect="fold" editable="true">
+            <f:selectItem itemLabel="Select One" itemValue="" />
+            <f:selectItems value="#{selectOneMenuView.cities}" />
+        </p:selectOneMenu>
+ 
+   
+    <p:outputLabel for="@next" value="RTL:" />
+        <p:selectOneMenu id="trl" value="#{selectOneMenuView.rtl}" style="width:125px" dir="rtl">
+            <f:selectItem itemLabel="Select One" itemValue="" />
+            <f:selectItem itemLabel="Xbox One" itemValue="Xbox One" />
+            <f:selectItem itemLabel="PS4" itemValue="PS4" />
+            <f:selectItem itemLabel="Wii U" itemValue="Wii U" />
+        </p:selectOneMenu>
+ 
+</h:form>
+        <p:spinner />
+    </h:body>
+</html>

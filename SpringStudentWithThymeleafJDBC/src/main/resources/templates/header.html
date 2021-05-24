@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org"
+	>
+<head>
+	<meta charset="UTF-8" />
+	<title>Document</title>
+</head>
+<body>
+	<div th:fragment="header">
+
+	<div id="header">
+	<div id="title">
+		<a href="M00001.jsp">Student Registration Assignment</a>
+	</div>
+	<div id="menuLoginTime">
+		<table>
+			<tr>
+				<td>User</td>
+				<td><span th:text="${session.sesUser.userId}"></span>:  <span th:text="${session.sesUser.userName}"></span></td>
+			</tr>
+			<tr>
+				<td>Current Date</td>
+				<td>: <span th:text="${session.date}"></span></td>
+			</tr>
+		</table>
+	</div>
+	<form action="/logout" method="post">
+		<input id="btn_logout" class="button" type="submit" value="Logout">
+	</form>
+</div>
+	
+
+</div>
+	
+</body>
+</html>
+

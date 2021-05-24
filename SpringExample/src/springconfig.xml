@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="
+http://www.springframework.org/schema/beans
+http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+
+	<bean id="user" class="com.exercise.User">
+		<property name="id" value="10"></property>
+		<property name="userName" value="Kyaw Kyaw"></property>
+	</bean>
+	<bean id="player" class="com.exercise.Player">
+		<property name="gamename" value="Dota"></property>
+		<property name="gameuser">
+			<ref bean="user" />
+		</property>
+	</bean>
+
+	<bean id="b" class="com.exercise.B"></bean>
+	<bean id="a" class="com.exercise.A" autowire="byName"></bean>
+
+	<context:annotation-config />
+
+	<bean id="student" class="com.exercise.Student">
+		<property name="name" value="Zara" />
+		<!-- try without passing age and check the result -->
+		<property name="age" value="11" />
+	</bean>
+</beans>

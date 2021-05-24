@@ -1,0 +1,268 @@
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:p="http://primefaces.org/ui"
+	xmlns:ui="http://java.sun.com/jsf/facelets">
+<h:head>
+	<style type="text/css">
+body {
+	width: 100%;
+	height: 950px;
+	margin: 0px 0px 0px 0px;
+	background-color: #252528;
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	font-family: "Oswald", sans-serif;
+	font-size: 14px;
+	font-weight: 300;
+	color: black;
+}
+/*===================================Header/NavBar===================================*/
+.dashboardHeader {
+	display: block;
+	position: fixed;
+	top: 0px;
+	width: 100%;
+	height: 56px;
+	margin: 0px;
+	z-index: 1;
+	text-align: center;
+	background-color: #252528;
+	color: #CCCCCC;
+	border-bottom: 15px solid #D44040;
+}
+
+.navBar ul {
+	margin: 12px 0px 0px 0px;
+	padding: 0px;
+	cursor: pointer;
+}
+
+.navBar li {
+	display: inline;
+	font-size: 24px;
+	text-decoration: underline;
+	padding-left: 4px;
+	padding-right: 5px;
+}
+
+.navBar li:hover {
+	color: white;
+}
+
+.navBar li:nth-child(1) {
+	border-right: 2px solid #D44040;
+}
+
+.navBar li:nth-child(2) {
+	border-right: 2px solid #D44040;
+}
+/*===================================Content Body===================================*/
+.contentBody {
+	width: 1147px;
+	height: 750px;
+	display: block;
+	background-color: white;
+	background-color: hsla(0, 50%, 100%, 0.2);
+	box-shadow: 1px 3px 8px black;
+	margin-top: 61px;
+	margin-left: auto;
+	margin-right: auto;
+	margin-bottom: 35px;
+	text-align: center;
+}
+
+.pageDescription {
+	width: 100%;
+	font-size: 20px;
+	margin: 0px;
+	padding-top: 15px;
+}
+
+.pageDescription h2 {
+	margin-top: 10px;
+	margin-bottom: 5px;
+	font-weight: 400;
+	color: #CCCCCC;
+	text-shadow: 2px 2px 0px black;
+}
+
+.userSearchForm {
+	margin-left: 26.5px;
+}
+
+.userSearchBox {
+	float: left;
+	width: 800px;
+	min-height: 400px;
+	max-height: 700px;
+	margin: 15px 0px 0px 173.5px;
+	background-color: #252528;
+	color: white;
+}
+
+.userSearchBoxHeader {
+	float: left;
+	width: 100%;
+	height: 35px;
+	background-color: #D44040;
+	color: white;
+	text-align: center;
+}
+
+.userSearchBoxHeader h4 {
+	font-size: 21px;
+	font-weight: 300;
+	margin-top: 2px;
+	margin-bottom: 0px;
+	text-shadow: 2px 2px 0px black;
+}
+
+.userSearchInput {
+	float: left;
+	width: 180px;
+	margin: 10px 5px 0px 5px;
+	display: inline;
+	text-align: left;
+}
+
+.userSearchSelect {
+	float: left;
+	width: 85px;
+	margin: 10px 5px 0px 5px;
+	text-align: left;
+}
+
+#userSearchButton {
+	float: left;
+	width: 72px;
+	height: 32px;
+	margin: 25px 5px 0px 5px;
+	background-color: #D44040;
+	border-color: #D44040;
+	border-radius: 5px 5px 5px 5px;
+	font-family: "Oswald", sans-serif;
+	font-size: 15px;
+	color: white;
+}
+
+#userSearchButton:hover {
+	background-color: #D66060;
+	border-color: #D66060;
+}
+
+.userSearchBox table {
+	float: left;
+	color: black;
+	margin: 30px 0px 0px 50px;
+	font-weight: 300;
+}
+
+tbody div {
+	overflow-y: scroll;
+	height: 200px;
+}
+
+.scrollTable table {
+	width: 100%;
+	margin: 0px;
+}
+
+.userSearchBox table th {
+	color: white;
+	font-weight: 300;
+	width: 140px;
+}
+
+.scrollTable table td {
+	width: 143.8px;
+}
+
+.userSearchBox table a {
+	color: #D44040;
+	text-decoration: underline;
+	font-weight: 300;
+}
+
+.userSearchBox table a:hover {
+	color: black;
+	cursor: pointer;
+}
+</style>
+	<link rel="stylesheet" type="text/css"
+		href="AdminUserSearchStyleSheet.css" />
+
+	<link href='https://fonts.googleapis.com/css?family=Oswald'
+		rel='stylesheet' type='text/css' />
+	<title>SWC Learning Management Systems - Admin User Search</title>
+</h:head>
+
+
+<h:body>
+
+	<!-- Header -->
+	<div class="dashboardHeader">
+		<div class="navBar">
+			<ul>
+				<li><a>Admin</a></li>
+				<li><a>Account</a></li>
+				<li><a>Logout</a></li>
+			</ul>
+		</div>
+	</div>
+	<!-- Content -->
+	<div class="contentBody">
+		<div class="pageDescription">
+			<h2>User Search</h2>
+		</div>
+
+		<div class="userSearchBox">
+			<div class="userSearchBoxHeader">
+				<h4>Search for Users</h4>
+			</div>
+
+			<h:form class="userSearchForm" id="form">
+				<div class="userSearchInput">
+					<p:outputLabel for="userId" value="User ID" />
+					<p:inputText id="userId" value="#" />
+
+				</div>
+				<div class="userSearchInput">
+					<p:outputLabel for="userName" value="User Name" />
+					<p:inputText id="userName" value="#" />
+
+				</div>
+
+				<div class="userSearchInput">
+					<p:spacer></p:spacer>
+					<p:commandButton value="Search" update="form" action="#"
+						
+						style="margin-top: 18px;
+background: #d44040; color:white; boder-radius : 10px;" icon="pi pi-check" />
+				</div>
+
+
+			</h:form>
+
+			<p:dataTable width="700" bgcolor="white" cellspacing="0">
+
+				<p:column headerText="Delete">
+					<p:commandButton value="Delete" update="form" action="#"
+						style="background-color: green;" icon="pi pi-check" />
+				</p:column>
+				<p:column headerText="Update">
+					<p:commandButton value="Update" update="form" action="#"
+						style="background-color: green;" icon="pi pi-check" />
+				</p:column>
+				<p:column headerText="User Id">
+					<h:outputText value="#" />
+				</p:column>
+				<p:column headerText="User Name">
+					<h:outputText value="#" />
+				</p:column>
+
+			</p:dataTable>
+		</div>
+	</div>
+</h:body>
+</html>

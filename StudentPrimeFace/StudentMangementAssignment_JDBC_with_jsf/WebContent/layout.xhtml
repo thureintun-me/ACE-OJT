@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:p="http://primefaces.org/ui"
+	xmlns:ui="http://java.sun.com/jsf/facelets">
+
+<h:head>
+	<h:outputStylesheet name="primeicons/primeicons.css"
+		library="primefaces" />
+	<h:outputStylesheet name="stylesheets/main.css" />
+	<h:outputStylesheet name="/stylesheets/bootstrap.min.css" />
+</h:head>
+
+<h:body>
+
+
+	<p:layout fullPage="true">
+
+		<ui:insert name="header">
+			<p:layoutUnit position="north" size="100">
+
+				<div id="header">
+					<div id="title">
+						<a href="M00001.jsp">Student Registration</a>
+					</div>
+					<div id="menuLoginTime">
+						<table>
+							<tr>
+								<td>User</td>
+								<td>: ${sessionScope.sesUser.userId}
+									${sessionScope.sesUser.userName}</td>
+							</tr>
+							<tr>
+								<td>Current Date</td>
+								<td>:%=new java.util.Date()</td>
+							</tr>
+						</table>
+					</div>
+
+				</div>
+
+			</p:layoutUnit>
+		</ui:insert>
+
+		<ui:insert name="footer">
+			<p:layoutUnit position="south" size="50" collapsible="true">
+
+				<div class="footer">
+					<span>Copyright &#169; ACE Inspiration 2020</span>
+				</div>
+			</p:layoutUnit>
+		</ui:insert>
+
+		<ui:insert name="menu">
+			<p:layoutUnit position="west" size="200" resizable="false">
+
+				<h:form class="menubar">
+					<p:growl>
+						<p:autoUpdate />
+					</p:growl>
+
+					<p:panelMenu style="width:300px;color:white;">
+						<p:submenu label="User" 
+							style="color:white">
+							<p:menuitem value="User Regisrtartion"
+								url="http://www.primefaces.org" action="#{menuView.save}"
+								icon="pi pi-user" />
+							<p:menuitem value="User Search" action="#{menuView.update}"
+								icon="pi pi-search" />
+						</p:submenu>
+						<p:submenu label="Student">
+							<p:menuitem value="Student Registration"
+								action="#{menuView.delete}" ajax="false" icon="pi pi-user" />
+							<p:menuitem value="Student Search" action="#{menuView.delete}"
+								ajax="false" icon="pi pi-search" />
+						</p:submenu>
+						<p:submenu label="Class">
+							<p:menuitem value="Class Registration"
+								action="#{menuView.delete}" ajax="false" icon="pi pi-id-card" />
+						</p:submenu>
+
+					</p:panelMenu>
+				</h:form>
+
+			</p:layoutUnit>
+
+		</ui:insert>
+
+
+		<div id="content">
+
+			<ui:insert name="content">
+
+
+
+				<p:layoutUnit position="center">
+
+						//code
+				</p:layoutUnit>
+
+
+			</ui:insert>
+
+		</div>
+
+	</p:layout>
+
+
+
+</h:body>
+
+</html>

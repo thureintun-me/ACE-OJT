@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="studnamespace">
+
+	<insert id="insert" parameterType="student"
+		useGeneratedKeys="true" keyProperty="id">
+		insert into STUDENT
+		(Name,Branch,Percentage,Phone,email)
+		values(#{name},#{branch},#{percentage},#{phone},#{email});
+	</insert>
+	<select id="getAll" resultType="student">
+
+		SELECT
+		STUDENT_ID AS id,
+		NAME,
+		EMAIL,
+		BRANCH,
+		PERCENTAGE,
+		PHONE
+		FROM STUDENT;
+
+	</select>
+	<select id="getById" parameterType="int" resultType="student">
+
+		SELECT
+		STUDENT_ID AS id,
+		NAME,
+		EMAIL,
+		BRANCH,
+		PERCENTAGE,
+		PHONE
+		FROM
+		STUDENT WHERE
+		STUDENT_ID = #{id};
+
+	</select>
+
+	<update id="update" parameterType="student">
+		UPDATE STUDENT SET BRANCH
+		=#{branch},PERCENTAGE =#{percentage} ,
+		NAME =#{name}, PHONE=#{phone},
+		EMAIL=#{email}
+		where STUDENT_ID =#{id};
+	</update>
+
+	<delete id="deletebyId" parameterType="int">
+		DELETE from STUDENT WHERE STUDENT_ID = #{id};
+	</delete>
+</mapper>

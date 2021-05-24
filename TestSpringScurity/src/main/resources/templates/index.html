@@ -1,0 +1,19 @@
+<!doctype html>
+<html lang="en"
+xmlns:th="http://www.thymeleaf.org"
+ xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity5">
+<head>
+	<meta charset="UTF-8" />
+	<title>Document</title>
+</head>
+<body>
+	<div sec:authorize="hasRole('ADMIN')">
+		Admin
+	</div>
+	<div sec:authorize="hasRole('ROLE_USER')">USER</div>
+	<div>
+    User: <span sec:authentication="name">NOT FOUND</span>
+    Spring Roles: <span sec:authentication="principal.authorities">NOT FOUND</span>
+</div>
+</body>
+</html>

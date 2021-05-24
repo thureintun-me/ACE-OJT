@@ -1,0 +1,143 @@
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:p="http://primefaces.org/ui"
+	xmlns:ui="http://java.sun.com/jsf/facelets">
+
+<h:head>
+	<style type="text/css">
+body {
+	background: #6D6027;
+	background: -webkit-linear-gradient(to right, #D3CBB8, #6D6027);
+	background: linear-gradient(to right, #D3CBB8, #6D6027);
+}
+
+.panelGridCenter {
+	margin: 0 auto;
+}
+
+.ui-panelgrid td {
+	background: #3E5151;
+	background: -webkit-linear-gradient(to right, #DECBA4, #3E5151);
+	background: linear-gradient(to right, #DECBA4, #3E5151);
+	color: white !important;
+}
+
+.inputclass {
+	width: 200px;
+}
+
+#di {
+	background: red;
+}
+</style>
+
+</h:head>
+
+<h:body>
+
+
+	<ui:composition template="layout.xhtml">
+		<ui:define name="content">
+			<p:layoutUnit position="center">
+				<div class="pageDescription">
+					<h1>Student Register</h1>
+				</div>
+				<br />
+				
+		<h:form name="registerForm" id="form" header="Validate">
+
+					<p:messages showDetail="true" closable="true" id="messages">
+						<p:autoUpdate />
+					</p:messages>
+
+					<h:outputText id="test" binding="#{student.component}" />
+					<h:message for="test" />
+					<p:panelGrid columns="2" style="width: 700px;"
+						styleClass="ui-noborder panelGridCenter">
+
+						<p:column style="background-color: #fdf2da;">
+							<br />
+							<p:outputLabel value="Student No *" for="id" />
+
+						</p:column>
+						<p:column>
+							<p:inputText value="#{student.id}" class="inputbox" id="id"
+								required="true" requiredMessage="Student Id cann't be null">
+							</p:inputText>
+
+						</p:column>
+
+
+						<p:column>
+							<br />
+							<p:outputLabel value="Student Name *" for="name" />
+						</p:column>
+						<p:column>
+							<p:inputText value="#{student.name}" class="inputbox" id="name"
+								required="true" requiredMessage="Student Name cann't be null" />
+
+						</p:column>
+						<p:column>
+							<br />
+							<p:outputLabel value="Class Name *" for="cname" />
+						</p:column>
+						<p:column>
+							<p:selectOneMenu id="cname" value="#{student.className}"
+								class="selectbox" required="true"
+								requiredMessage="Class Name cann't be null">
+								<f:selectItem itemLabel="" itemValue="" />
+								<f:selectItems value="#{student.classList()}" var="list"
+									itemLabel="#{list.name}" itemValue="#{list.name}" />
+
+							</p:selectOneMenu>
+						</p:column>
+						<p:column>
+							<br />
+							<p:outputLabel value="Registered Date *" for="Rdate" />
+						</p:column>
+						<p:column>
+							<p:datePicker id="Rdate" value="#{student.registerDate}"
+								style="width:250px !important;" required="true"
+								requiredMessage="Date cann't be null" />
+						</p:column>
+						<p:column>
+							<br />
+							<p:outputLabel value="Status *" for="status" />
+						</p:column>
+						<p:column>
+							<p:selectOneMenu id="status" value="#{student.status}"
+								class="selectbox" required="true"
+								requiredMessage="Status cann't be null">
+								<f:selectItem itemLabel="" itemValue="" />
+								<f:selectItem itemLabel="Attending" itemValue="Attending" />
+								<f:selectItem itemLabel="Passed" itemValue="Passed" />
+								<f:selectItem itemLabel="Failed" itemValue="Failed" />
+							</p:selectOneMenu>
+
+						</p:column>
+						<p:column>
+							<br />
+						</p:column>
+						<p:column>
+							<p:commandButton value="Register" update="form"
+								action="#{student.save()}" class="buttonsave"
+								style="background: #40514e;color:white;" icon="pi pi-check" />
+							<p:commandButton value="Back" immediate="true"
+								action="BUD001.xhtml" class="buttonsave"
+								style="background: #40514e;color:white;"
+								icon="pi pi-chevron-left"></p:commandButton>
+						</p:column>
+					</p:panelGrid>
+
+					<br />
+
+				</h:form> 
+
+			</p:layoutUnit>
+		</ui:define>
+	</ui:composition>
+
+
+</h:body>
+</html>

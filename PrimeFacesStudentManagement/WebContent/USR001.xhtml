@@ -1,0 +1,120 @@
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:p="http://primefaces.org/ui"
+	xmlns:ui="http://java.sun.com/jsf/facelets">
+
+<h:head>
+
+</h:head>
+
+<h:body>
+
+
+	<ui:composition template="layout.xhtml">
+
+
+		<ui:define name="content">
+
+
+			<p:layoutUnit position="center">
+				<h:form>
+					<div class="pageDescription">
+						<h1>User Search</h1>
+					</div>
+					<p:messages id="messages" showDetail="true" closable="true">
+						<p:autoUpdate   />
+					</p:messages>
+					<div class="d-flex">
+
+						<div class="p-2">
+							<div>
+
+								<p:inputText id="userId" placeholder="User Id"
+									value="#{userBean.id}" />
+
+							</div>
+
+						</div>
+						<div class="p-2">
+
+							<div>
+
+								<p:inputText id="userName" placeholder="User Name"
+									value="#{userBean.name}" />
+
+							</div>
+
+						</div>
+						<div class="p-2">
+							<div>
+								<p:spacer></p:spacer>
+								<p:commandButton value="Search"
+									action="#{userBean.search(userBean)}" icon="pi pi-search"
+									style="background: #40514e;color:white;margin:2px;" />
+							</div>
+						</div>
+						<div class="p-2">
+							<div>
+								<p:spacer></p:spacer>
+								<p:commandButton value="Clear" action="#{userBean.reset()}"
+									icon="pi pi-search-minus"
+									style="background: #40514e;color:white;margin:2px;" />
+							</div>
+						</div>
+
+					</div>
+
+
+
+
+					<div>
+
+						<p:dataTable binding="#{table}" bgcolor="white" cellspacing="0"
+							tablestyle="width:auto" value="#{userList}" var="userlist"
+							id="usertable">
+
+							<p:column headerText="No">
+								<h:outputText value="#{table.rowIndex + 1}" />
+							</p:column>
+							<p:column headerText="User Id">
+								<h:outputText value="#{userlist.id}" />
+							</p:column>
+							<p:column headerText="User Name">
+								<h:outputText value="#{userlist.name}" />
+							</p:column>
+							<p:column headerText="Action">
+
+								<p:commandButton value="Update"
+									action="#{userBean.edit(userlist.id)}"
+									style="background: #40514e;color:white;" class="buttonsave"
+									icon="pi pi-check" />
+								<p:commandButton value="Delete"
+									action="#{userBean.delete(userlist.id)}"
+									style="background: #40514e;color:white;" class="buttonsave"
+									icon="pi pi-check">
+									<p:confirm header="Confirmation"
+										message="Are you sure to delete?" icon="ui-icon-alert" />
+								</p:commandButton>
+								<p:confirmDialog global="true" showEffect="fade"
+									hideEffect="fade">
+									<p:commandButton value="Yes" type="button"
+										styleClass="ui-confirmdialog-yes" icon="ui-icon-check" />
+									<p:commandButton value="No" type="button"
+										styleClass="ui-confirmdialog-no" icon="ui-icon-close" />
+								</p:confirmDialog>
+							</p:column>
+						</p:dataTable>
+					</div>
+
+
+
+				</h:form>
+			</p:layoutUnit>
+
+		</ui:define>
+	</ui:composition>
+
+
+</h:body>
+</html>

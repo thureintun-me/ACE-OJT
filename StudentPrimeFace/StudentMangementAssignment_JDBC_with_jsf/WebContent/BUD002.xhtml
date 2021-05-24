@@ -1,0 +1,86 @@
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:p="http://primefaces.org/ui"
+	xmlns:ui="http://java.sun.com/jsf/facelets">
+
+<h:head>
+
+</h:head>
+
+<h:body>
+
+
+	<ui:composition template="layout.xhtml">
+		<ui:define name="content">
+			<p:layoutUnit position="center">
+			<div class="pageDescription">
+						<h2>Student Register</h2>
+					</div>
+					<br/><br/>
+					<h:form name="registerForm" id="form">
+						<p:messages id="messages" showDetail="true" closable="true">
+							<p:autoUpdate />
+						</p:messages>
+						<p:panelGrid columns="2" style="width: 700px;"  
+							styleClass="panelGridCenter">
+							<p:column style="background-color: #fdf2da;">
+								<p:outputLabel value="Student No *" for="id" />
+							</p:column>
+							<p:column>
+								<p:inputText value="#{student.id}" class="inputbox" id="id" />
+							</p:column>
+
+							<p:column>
+								<p:outputLabel value="Student Name *" for="name" />
+							</p:column>
+							<p:column>
+								<p:inputText value="#{student.name}" class="inputbox" id="name" />
+							</p:column>
+							<p:column>
+								<p:outputLabel value="Class Name *" for="cname"  />
+							</p:column>
+							<p:column >
+								<p:selectOneMenu id="cname" value="#{selectOneMenuView.console}" class="inputbox">
+									<f:selectItem itemLabel="Select One" itemValue="" />
+									<f:selectItem itemLabel="Xbox One" itemValue="Xbox One" />
+									<f:selectItem itemLabel="PS4" itemValue="PS4" />
+									<f:selectItem itemLabel="Wii U" itemValue="Wii U" />
+								</p:selectOneMenu>
+							</p:column>
+							<p:column>
+								<p:outputLabel value="Registered Date *" for="Rdate" />
+							</p:column>
+							<p:column>
+								<p:datePicker id="Rdate" value="#{calendarView.date2}" />
+							</p:column>
+							<p:column>
+								<p:outputLabel value="Status *" for="status" />
+							</p:column>
+							<p:column>
+								<p:selectOneMenu id="status" value="#{selectOneMenuView.console}"
+									style="width:240px !important;border-radius: 11px !important;">
+									<f:selectItem itemLabel="Select One" itemValue="" />
+									<f:selectItem itemLabel="Xbox One" itemValue="Xbox One" />
+									<f:selectItem itemLabel="PS4" itemValue="PS4" />
+									<f:selectItem itemLabel="Wii U" itemValue="Wii U" />
+								</p:selectOneMenu>
+							</p:column>
+							<p:column>
+							</p:column>
+							<p:column>
+								<p:commandButton value="Register" update="form"
+									action="#{user.save}" class="buttonsave"
+									style="background-color: green;" icon="pi pi-check" />
+							</p:column>
+						</p:panelGrid>
+						<br />
+					</h:form>
+				
+			</p:layoutUnit>
+		</ui:define>
+	</ui:composition>
+
+
+</h:body>
+</html>

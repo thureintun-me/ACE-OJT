@@ -1,0 +1,88 @@
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:p="http://primefaces.org/ui"
+	xmlns:ui="http://java.sun.com/jsf/facelets">
+
+<h:head>
+
+</h:head>
+
+<h:body>
+
+
+	<ui:composition template="layout.xhtml">
+
+
+		<ui:define name="content">
+		
+
+			<p:layoutUnit position="center">
+			<h:form>
+				<div class="pageDescription">
+					<h2>User Search</h2>
+				</div>
+				<div class="d-flex">
+				
+					<div class="p-2">
+						<div >
+
+							<p:inputText id="userId" placeholder="User Id" />
+
+						</div>
+
+					</div>
+					<div class="p-2">
+
+						<div >
+
+							<p:inputText id="userName" placeholder="User Name" />
+
+						</div>
+
+					</div>
+					<div class="p-2">
+						<div >
+							<p:spacer></p:spacer>
+							<p:commandButton value="Search" action="#" icon="pi pi-check" style="background: #40514e;color:white;margin:2px;"/>
+						</div>
+					</div>
+					
+				</div>
+
+
+
+
+				<div>
+
+					<p:dataTable  bgcolor="white" cellspacing="0" tablestyle="width:auto">
+
+						<p:column headerText="Delete" >
+							<p:commandButton value="Delete" update="form" action="#"
+								style="background-color: green;" icon="pi pi-check" />
+						</p:column>
+						<p:column headerText="Update">
+							<p:commandButton value="Update" update="form" action="#"
+								style="background-color: green;" icon="pi pi-check" />
+						</p:column>
+						<p:column headerText="User Id">
+							<h:outputText value="#" />
+						</p:column>
+						<p:column headerText="User Name">
+							<h:outputText value="#" />
+						</p:column>
+
+					</p:dataTable>
+				</div>
+
+
+
+</h:form>
+			</p:layoutUnit>
+			
+		</ui:define>
+	</ui:composition>
+
+
+</h:body>
+</html>

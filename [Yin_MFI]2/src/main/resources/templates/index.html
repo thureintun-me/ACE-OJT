@@ -1,0 +1,22 @@
+<!doctype html>
+<html lang="en"
+xmlns:th="http://www.thymeleaf.org"
+ xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity5">
+<head>
+	<meta charset="UTF-8" />
+	<title>Document</title>
+</head>
+<body>
+
+<div sec:authorize="isAuthenticated()">
+    Welcome <b><span sec:authentication="name">Username</span></b>
+    &nbsp;
+    <i><span sec:authentication="principal.authorities">Roles</span></i>
+</div>
+
+<div sec:authorize="hasAnyAuthority('Loan')">
+    <a href="/new">Create New Product</a>
+</div>
+
+</body>
+</html>

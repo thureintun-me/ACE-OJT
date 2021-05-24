@@ -1,0 +1,177 @@
+@charset "UTF-8";
+
+#header {
+	background: #3E5151;
+	background: -webkit-linear-gradient(to right, #DECBA4, #3E5151);
+	background: linear-gradient(to right, #DECBA4, #3E5151);
+	width: 100%;
+	height: 60px;
+	top: 0;
+	position: relative;
+	color: white;
+	float: top;
+}
+
+#title {
+	position: relative;
+	float: left;
+	top: 20px;
+	left: 70px;
+	font-size: 30px;
+	width: 450px;
+}
+
+#title a {
+	color: white;
+}
+
+#menuLoginTime {
+	position: absolute;
+	float: left;
+	top: 10px;
+	left: 530px;
+	width: 450px;
+	margin-top: 10px;
+}
+
+#menuUpdateTime {
+	position: absolute;
+	float: left;
+	top: 60px;
+	left: 530px;
+	width: 450px;
+}
+
+.ui-panelgrid td {
+	background: #3E5151;
+	background: -webkit-linear-gradient(to right, #DECBA4, #3E5151);
+	background: linear-gradient(to right, #DECBA4, #3E5151);
+	color: white !important;
+}
+
+.panelGridCenter {
+	margin: 0 auto;
+}
+
+.ui-datatable-even {
+	background: #eaeaea !important;
+}
+
+.ui-datatable-odd {
+	background: white !important;
+}
+
+.ui-inputfield {
+	margin: 0;
+	padding: 5px;
+	background: #eaeaea !important;
+	font-weight: normal;
+	outline: medium none;
+	box-shadow: inset 0 0 0 #8f8f8f !important;
+	-webkit-box-shadow: inset 0 0 0 #8f8f8f !important;
+}
+
+.ui-panelmenu-header {
+	background-color: #c0c0c0 !important;
+}
+
+.ui-panelmenu-content {
+	color: red;
+}
+
+.ui-menuitem {
+	background: #3E5151 !important;
+	background: -webkit-linear-gradient(to right, #DECBA4, #3E5151)
+		!important;
+	background: linear-gradient(to right, #DECBA4, #3E5151) !important;
+	color: white;
+	font-style: italic !important;
+}
+
+.ui-menuitem-text {
+	color: white;
+}
+
+div.footer {
+	background: #3E5151;
+	background: -webkit-linear-gradient(to right, #DECBA4, #3E5151);
+	background: linear-gradient(to right, #DECBA4, #3E5151);
+	text-align: center;
+	color: white;
+	float: bottom;
+	height: 20px;
+	background: -webkit-linear-gradient(to right, #DECBA4, #3E5151);
+	background: linear-gradient(to right, #DECBA4, #3E5151);
+}
+
+.ui-layout-unit-content {
+	background: #3E5151;
+	background: -webkit-linear-gradient(to right, #DECBA4, #3E5151);
+	background: linear-gradient(to right, #DECBA4, #3E5151);
+}
+
+.inputbox {
+	width: 300px;
+	margin-left: 10px;
+	background-color: blue;
+}
+
+.selectbox {
+	width: 300px !important;
+	border-radius: 20px !important;
+}
+
+.buttonsave {
+	border-radius: 9px;
+	width: 125px;
+}
+
+.p-datepicker ui-calendar {
+	width: 250px !important;
+	border-radius: 9px !important;
+}
+
+body {
+	width: 100%;
+	height: 950px;
+	margin: 0px 0px 0px 0px;
+	background-color: #252528;
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	font-family: "Oswald", sans-serif;
+	font-size: 14px;
+	font-weight: 300;
+	background: #6D6027;
+	background: -webkit-linear-gradient(to right, #D3CBB8, #6D6027);
+	background: linear-gradient(to right, #D3CBB8, #6D6027);
+}
+
+.pageDescription {
+	width: 100%;
+	font-size: 20px;
+	text-align: center;
+	padding-top: 2px;
+	padding-bottom: 2px;
+}
+
+.pageDescription h2 {
+	margin-top: 10px;
+	margin-bottom: 5px;
+	font-weight: 400;
+	color: white;
+	text-shadow: 2px 2px 0px black;
+}
+
+.pageDescription p {
+	font-weight: 400;
+	color: white;
+}
+
+.btn_logout {
+	position: relative;
+	float: right;
+	top: 20px;
+	right: 70px;
+	font-size: 15px;
+	width: 120px;
+}

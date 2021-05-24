@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="classnamespace">
+
+	<insert id="insertClass" parameterType="classReq" useGeneratedKeys="true"  keyProperty="classId">
+		insert into class
+		(class_id,class_name)
+		values(#{classId},#{className});
+	
+	</insert>
+
+	<select id="selectClass" parameterType="classReq" resultMap="classResult">
+	
+		select * from class
+		
+		<where>
+		
+			<if test="classId != null and classId != '' ">
+				class_id like #{classId}
+			</if>
+			
+			<if test="className != null and className != ''">
+				class_name like #{className}
+			</if>
+		</where>
+		
+		
+	</select>
+	
+	
+	
+	<resultMap type="classRes" id="classResult">
+		<id property="classId" column="class_id"/>
+		<result property="className" column="class_name"/>
+	</resultMap>
+</mapper>

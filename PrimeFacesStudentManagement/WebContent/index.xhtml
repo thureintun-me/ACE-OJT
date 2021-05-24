@@ -1,0 +1,111 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://xmlns.jcp.org/jsf/html"
+	xmlns:f="http://xmlns.jcp.org/jsf/core"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:p="http://primefaces.org/ui">
+<h:head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<title>(USR001)login</title>
+	<h:outputStylesheet name="/stylesheets/base.css" />
+	<h:outputStylesheet name="/stylesheets/container.css" />
+	<h:outputScript library="javascript" name="accordion-menu.js"
+		target="head" />
+	<h:outputScript library="javascript" name="general.js" target="head" />
+	<script type="text/javascript">
+		window.history.forward();
+		function noBack() {
+			window.history.forward();
+		}
+	</script>
+
+</h:head>
+<h:body class="main_body">
+	<ui:insert name="header">
+		<ui:include src="/header.xhtml"></ui:include>
+	</ui:insert>
+
+	<div id="container">
+		<div id="left_menu">
+			<!-- menu html code exist the menu function of general.js -->
+		</div>
+		<div id="main_contents">
+			<div id="contents">
+				<h3>User Register</h3>
+				<label id="errormsg"> #{err} </label><br /> <br /> <br /> <label
+					style="color: blue;">#{msg}</label>
+				<h:form name="registerForm" id="form">
+					<p:panelGrid columns="2" style="width: 700px;" styleClass="ui-noborder">
+
+						<p:column style="background-color: #fdf2da;"  >
+							<p:outputLabel value="ID *" />
+						</p:column>
+						<p:column>
+							<p:inputText value="#{user.id}" style="width: 250px; margin-left: 10px;background-color: #fdf2da;" />
+						</p:column>
+
+						<p:column>
+							<p:outputLabel value="User Name *"  />
+						</p:column>
+						<p:column>
+							<p:inputText value="#{user.name}" style="width: 250px; margin-left: 10px;" />
+						</p:column>
+						<p:column>
+							<p:outputLabel value="Password *"  />
+						</p:column>
+						<p:column>
+							<p:password value="#{user.password}" style="width: 250px; margin-left: 10px;" />
+						</p:column>
+						<p:column>
+							<p:outputLabel value="Confirmed Password *"  />
+						</p:column>
+						<p:column>
+							<p:password value="#{user.confirm}" style="width: 250px; margin-left: 10px;"/>
+						</p:column>
+						<p:column>
+
+						</p:column>
+						<p:column>
+							<p:commandButton value="Register"  update="form"
+								action="#{user.save}" style="margin-left: 10px;"  styleClass="ui-priority-primary"/>
+						</p:column>
+					</p:panelGrid>
+					<br />
+					<h:commandButton value="Register" class="button"
+						action="#{user.save()}" />
+				</h:form>
+
+				<br /> <br /> <br />
+				<h:form>
+					<div class="p-field p-grid" >
+						<p:outputLabel for="firstname3" styleClass="p-col-fixed"
+							style="width:100px" value="Firstname" />
+						<p:spacer/>
+						<div class="p-col">
+							<p:inputText id="firstname3" />
+						</div>
+					</div>
+					<br /> 
+					<div class="p-field p-grid">
+						<p:outputLabel for="lastname3" styleClass="p-col-fixed"
+							style="width:100px" value="Lastname" />
+							<p:spacer/>
+						<div class="p-col">
+							<p:inputText id="lastname3" />
+						</div>
+					</div>
+					
+			</h:form>
+			</div>
+
+		</div>
+
+	</div>
+
+	<div class="footer">
+		<span>Copyright &#169; ACE Inspiration 2016</span>
+	</div>
+</h:body>
+</html>

@@ -1,0 +1,132 @@
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:p="http://primefaces.org/ui"
+	xmlns:ui="http://java.sun.com/jsf/facelets">
+
+<h:head>
+
+</h:head>
+
+<h:body>
+
+
+	<ui:composition template="layout.xhtml">
+
+
+		<ui:define name="content">
+
+
+			<p:layoutUnit position="center">
+				<h:form>
+					<div class="pageDescription">
+						<h1>Student Search</h1>
+					</div>
+					<p:messages id="messages" showDetail="true" closable="true">
+						<p:autoUpdate />
+					</p:messages>
+					<div class="d-flex">
+						
+						<div class="p-2">
+							<div>
+
+								<p:inputText id="StudentNo" placeholder="Student No"
+									value="#{student.id}" />
+
+							</div>
+
+						</div>
+						<div class="p-2">
+
+							<div>
+
+								<p:inputText id="StudentName" placeholder="Student Name"
+									value="#{student.name}" />
+
+							</div>
+
+						</div>
+						<div class="p-2">
+
+							<div>
+
+								<p:inputText id="cName" placeholder="Class Name"
+									value="#{student.className}" />
+
+							</div>
+
+						</div>
+						<div class="p-2">
+							<div>
+								<p:spacer></p:spacer>
+								<p:commandButton value="Search" onclick="PF('myPoll').start"
+									action="#{student.search(student)}" icon="pi pi-search"
+									style="background: #40514e;color:white;margin:2px;" />
+							</div>
+						</div>
+						<div class="p-2">
+							<div>
+								<p:spacer></p:spacer>
+								<p:commandButton value="Clear" action="#{student.reset()}"
+									icon="pi pi-search-minus"
+									style="background: #40514e;color:white;margin:2px;" />
+							</div>
+						</div>
+					</div>
+					<div>
+
+						<p:dataTable binding="#{table}" bgcolor="white" cellspacing="0"
+							tablestyle="width:auto" value="#{searchStudentList}" var="list">
+
+							<p:column headerText="No" style="width:50px;">
+								<h:outputText value="#{table.rowIndex + 1}" />
+							</p:column>
+							<p:column headerText="Student No" class="cellheader">
+
+								<h:outputText value="#{list.id}" />
+							</p:column>
+							<p:column headerText="Student Name" class="cellheader">
+								<h:outputText value="#{list.name}" />
+							</p:column>
+							<p:column headerText="Class Name" class="cellheader">
+								<h:outputText value="#{list.className}" />
+							</p:column>
+							<p:column headerText="Registered Date" class="cellheader">
+								<h:outputText value="#{list.registerDate}" />
+							</p:column>
+							<p:column headerText="Status" class="cellheader">
+								<h:outputText value="#{list.status}" />
+							</p:column>
+							<p:column headerText="Action" >
+								<p:commandButton value="Update" onclick="PF('myPoll').start"
+									action="#{student.edit(list.id)}"
+									style="background: #40514e;color:white;"  class="buttonsave" icon="pi pi-check" />
+								<p:commandButton value="Delete" 
+									action="#{student.delete(list.id)}"
+									style="background: #40514e;color:white;" class="buttonsave" icon="pi pi-check">
+									<p:confirm header="Confirmation"
+										message="Are you sure to delete?" icon="ui-icon-alert" />	
+									</p:commandButton>
+									<p:confirmDialog global="true" showEffect="fade"
+									hideEffect="fade">
+									<p:commandButton value="Yes" type="button"
+										styleClass="ui-confirmdialog-yes" icon="ui-icon-check" />
+									<p:commandButton value="No" type="button"
+										styleClass="ui-confirmdialog-no" icon="ui-icon-close" />
+								</p:confirmDialog>
+							</p:column>
+
+						</p:dataTable>
+					</div>
+
+
+
+				</h:form>
+			</p:layoutUnit>
+
+		</ui:define>
+	</ui:composition>
+
+
+</h:body>
+</html>

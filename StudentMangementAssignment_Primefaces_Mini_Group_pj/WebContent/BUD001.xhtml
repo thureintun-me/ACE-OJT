@@ -1,0 +1,107 @@
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:p="http://primefaces.org/ui"
+	xmlns:ui="http://java.sun.com/jsf/facelets">
+
+<h:head>
+
+</h:head>
+
+<h:body>
+
+
+	<ui:composition template="layout.xhtml">
+
+
+		<ui:define name="content">
+		
+
+			<p:layoutUnit position="center">
+			<h:form>
+				<div class="pageDescription">
+					<h2>Student Search</h2>
+				</div>
+				<div class="d-flex">
+				
+					<div class="p-2">
+						<div >
+
+							<p:inputText id="StudentNo" placeholder="Student No" />
+
+						</div>
+
+					</div>
+					<div class="p-2">
+
+						<div >
+
+							<p:inputText id="StudentName" placeholder="Student Name" />
+
+						</div>
+
+					</div>
+					<div class="p-2">
+
+						<div >
+
+							<p:inputText id="cName" placeholder="Class Name" />
+
+						</div>
+
+					</div>
+					<div class="p-2">
+						<div >
+							<p:spacer></p:spacer>
+							<p:commandButton value="Search" action="#" icon="pi pi-search" style="background: #40514e;color:white;margin:2px;"/>
+						</div>
+					</div>
+					<div class="p-2">
+						<div >
+							<p:spacer></p:spacer>
+							<p:commandButton value="Clear" action="#" icon="pi pi-search-minus" style="background: #40514e;color:white;margin:2px;"/>
+						</div>
+					</div>
+					
+				</div>
+
+
+
+
+				<div>
+
+					<p:dataTable  bgcolor="white" cellspacing="0" tablestyle="width:auto">
+
+						<p:column headerText="No" >
+							<h:outputText value="123" />
+						</p:column>
+						<p:column headerText="Student No">
+							<h:outputText value="#" />
+						</p:column>
+						<p:column headerText="Student Name">
+							<h:outputText value="#" />
+						</p:column>
+						<p:column headerText="Class Name">
+							<h:outputText value="#" />
+						</p:column>
+						<p:column headerText="Registered Date">
+							<h:outputText value="#" />
+						</p:column>
+						<p:column headerText="Status">
+							<h:outputText value="#" />
+						</p:column>
+
+					</p:dataTable>
+				</div>
+
+
+
+</h:form>
+			</p:layoutUnit>
+			
+		</ui:define>
+	</ui:composition>
+
+
+</h:body>
+</html>

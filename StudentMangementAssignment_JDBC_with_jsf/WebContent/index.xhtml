@@ -1,0 +1,44 @@
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:p="http://primefaces.org/ui"
+	xmlns:ui="http://java.sun.com/jsf/facelets">
+
+<h:head>
+
+</h:head>
+
+<h:body>
+
+
+	<ui:composition template="layout.xhtml">
+
+
+		<ui:define name="content">
+			<p:layoutUnit position="center">
+				<h:form>
+
+					<h3>Horizontal and Fixed Width</h3>
+					<div class="p-field p-grid">
+						<p:outputLabel for="firstname3" styleClass="p-col-fixed"
+							style="width:100px" value="Firstname" />
+						<div class="p-col">
+							<p:inputText id="firstname3" />
+						</div>
+					</div>
+					<div class="p-field p-grid">
+						<p:outputLabel for="lastname3" styleClass="p-col-fixed"
+							style="width:100px" value="Lastname" />
+						<div class="p-col">
+							<p:inputText id="lastname3" />
+						</div>
+					</div>
+				</h:form>
+
+			</p:layoutUnit>
+		</ui:define>
+	</ui:composition>
+
+
+</h:body>
+</html>

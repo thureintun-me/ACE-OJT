@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" path="src"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-11">
+		<attributes>
+			<attribute name="module" value="true"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="/home/thureintun/Downloads/Spring Lib/validation-api-2.0.1.Final.jar"/>
+	<classpathentry kind="lib" path="/home/thureintun/Downloads/Spring Lib/spring-websocket-5.0.7.RELEASE.jar"/>
+	<classpathentry kind="lib" path="/home/thureintun/Downloads/Spring Lib/spring-webmvc-5.0.7.RELEASE.jar"/>
+	<classpathentry kind="lib" path="/home/thureintun/Downloads/Spring Lib/spring-webflux-5.0.7.RELEASE.jar"/>
+	<classpathentry kind="lib" path="/home/thureintun/Downloads/Spring Lib/spring-web-5.0.7.RELEASE.jar"/>
+	<classpathentry kind="lib" path="/home/thureintun/Downloads/Spring Lib/spring-tx-5.0.7.RELEASE.jar"/>
+	<classpathentry kind="lib" path="/home/thureintun/Downloads/Spring Lib/spring-test-5.0.7.RELEASE.jar"/>
+	<classpathentry kind="lib" path="/home/thureintun/Downloads/Spring Lib/spring-oxm-5.0.7.RELEASE.jar"/>
+	<classpathentry kind="lib" path="/home/thureintun/Downloads/Spring Lib/spring-orm-5.0.7.RELEASE.jar"/>
+	<classpathentry kind="lib" path="/home/thureintun/Downloads/Spring Lib/spring-messaging-5.0.7.RELEASE.jar"/>
+	<classpathentry kind="lib" path="/home/thureintun/Downloads/Spring Lib/spring-jms-5.0.7.RELEASE.jar"/>
+	<classpathentry kind="lib" path="/home/thureintun/Downloads/Spring Lib/spring-jdbc-5.0.7.RELEASE.jar"/>
+	<classpathentry kind="lib" path="/home/thureintun/Downloads/Spring Lib/spring-jcl-5.0.7.RELEASE.jar"/>
+	<classpathentry kind="lib" path="/home/thureintun/Downloads/Spring Lib/spring-instrument-5.0.7.RELEASE.jar"/>
+	<classpathentry kind="lib" path="/home/thureintun/Downloads/Spring Lib/spring-expression-5.0.7.RELEASE.jar"/>
+	<classpathentry kind="lib" path="/home/thureintun/Downloads/Spring Lib/spring-core-5.0.7.RELEASE.jar"/>
+	<classpathentry kind="lib" path="/home/thureintun/Downloads/Spring Lib/spring-context-support-5.0.7.RELEASE.jar"/>
+	<classpathentry kind="lib" path="/home/thureintun/Downloads/Spring Lib/spring-context-indexer-5.0.7.RELEASE.jar"/>
+	<classpathentry kind="lib" path="/home/thureintun/Downloads/Spring Lib/spring-context-5.0.7.RELEASE.jar"/>
+	<classpathentry kind="lib" path="/home/thureintun/Downloads/Spring Lib/spring-beans-5.0.7.RELEASE.jar"/>
+	<classpathentry kind="lib" path="/home/thureintun/Downloads/Spring Lib/spring-aspects-5.0.7.RELEASE.jar"/>
+	<classpathentry kind="lib" path="/home/thureintun/Downloads/Spring Lib/spring-aop-5.0.7.RELEASE.jar"/>
+	<classpathentry kind="lib" path="/home/thureintun/Downloads/Spring Lib/org.springframework.transaction-3.1.0.release.jar"/>
+	<classpathentry kind="lib" path="/home/thureintun/Downloads/Spring Lib/jstl-1.2.jar"/>
+	<classpathentry kind="lib" path="/home/thureintun/Downloads/Spring Lib/jboss-logging-3.3.2.Final.jar"/>
+	<classpathentry kind="lib" path="/home/thureintun/Downloads/Spring Lib/javax.el-3.0.1-b09.jar"/>
+	<classpathentry kind="lib" path="/home/thureintun/Downloads/Spring Lib/hibernate-validator-6.0.13.Final.jar"/>
+	<classpathentry kind="lib" path="/home/thureintun/Downloads/Spring Lib/gson-2.8.5.jar"/>
+	<classpathentry kind="lib" path="/home/thureintun/Downloads/Spring Lib/commons-logging-1.2.jar"/>
+	<classpathentry kind="lib" path="/home/thureintun/Downloads/Spring Lib/classmate-1.3.4.jar"/>
+	<classpathentry kind="output" path="bin"/>
+</classpath>

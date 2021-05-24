@@ -1,0 +1,82 @@
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:p="http://primefaces.org/ui"
+	xmlns:ui="http://java.sun.com/jsf/facelets">
+
+<h:head>
+
+</h:head>
+
+<h:body>
+
+
+	<ui:composition template="layout.xhtml">
+
+
+		<ui:define name="content">
+			<p:layoutUnit position="center">
+				<div class="pageDescription">
+					<h2>User Update</h2>
+				</div>
+				<br />
+				<h:form name="registerForm" id="form">
+
+					<p:messages id="messages" showDetail="true" closable="true">
+						<p:autoUpdate />
+					</p:messages>
+
+					<p:panelGrid columns="2" style="width: 700px;"
+						styleClass="ui-noborder  panelGridCenter">
+						<p:column style="background-color: #fdf2da;">
+							<br/>
+							<p:outputLabel value="ID *" />
+						</p:column>
+						<p:column>
+							<p:inputText value="#{user.id}" class="inputbox" disabled="true"/>
+						</p:column>
+
+						<p:column>
+							<br/>
+							<p:outputLabel value="User Name *" />
+						</p:column>
+						<p:column>
+							<p:inputText value="#{user.name}" class="inputbox" />
+						</p:column>
+						<p:column>
+							<br/>
+							<p:outputLabel value="Password *" />
+						</p:column>
+						<p:column>
+							<p:password value="#{user.password}" class="inputbox" />
+						</p:column>
+						<p:column>
+							<br/>
+							<p:outputLabel value="Confirmed Password *" />
+						</p:column>
+						<p:column>
+							<p:password value="#{user.confirm}" class="inputbox" />
+						</p:column>
+						<p:column>
+						<br/>
+						</p:column>
+						<p:column>
+						
+							<p:commandButton value="Update" update="form"
+								action="#{user.save}" class="buttonsave"
+								style="background: #40514e;color:white;" icon="pi pi-check" />
+									<p:commandButton value="Back" update="form"
+								action="#{USR001}" class="buttonsave"
+								style="background: #40514e;color:white;" icon="pi pi-chevron-left"/>
+						</p:column>
+					</p:panelGrid>
+					<br />
+				</h:form>
+
+			</p:layoutUnit>
+		</ui:define>
+	</ui:composition>
+
+
+</h:body>
+</html>

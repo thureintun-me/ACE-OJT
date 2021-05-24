@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en"
+  xmlns:th="http://www.thymeleaf.org">
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Tri Balance Report</title>
+    <!-- plugins:css -->
+    <link rel="stylesheet" href="../../assets/vendors/mdi/css/materialdesignicons.min.css">
+    <link rel="stylesheet" href="../../assets/vendors/css/vendor.bundle.base.css">
+    <!-- endinject -->
+    <!-- Plugin css for this page -->
+    <!-- End plugin css for this page -->
+    <!-- inject:css -->
+    <!-- endinject -->
+    <!-- Layout styles -->
+    <link rel="stylesheet" href="../../assets/css/style.css">
+    <!-- End layout styles -->
+    <link rel="shortcut icon" href="../../assets/images/favicon.ico" />
+</head>
+  <body>
+    <div class="container-scroller">
+      <!-- partial:../../partials/_navbar.html -->
+     <nav th:replace="/fragment/header.html::header"></nav>
+      <!-- partial -->
+      <div class="container-fluid page-body-wrapper">
+        <!-- partial:../../partials/_sidebar.html -->
+        <nav th:replace="/fragment/sidebar.html::sidebar"></nav>        <!-- partial -->
+        <div class="main-panel">
+          <div class="content-wrapper">
+       
+            <div class="row">
+              <div class="col-md-12 grid-margin stretch-card">
+                <div class="card">
+                  <div class="card-body">
+                    <div class="page-header">
+                      <h3 class="page-title">
+                        <span class="page-title-icon bg-gradient-info text-white mr-2">
+                          <i class="mdi mdi-home"></i>
+                        </span> Tri Balance Report
+                      </h3>
+                      
+                  
+                    </div>
+                    <br>
+                    <div class="form-group">
+                      <div class="input-group" >
+                        <form class="form-inline">
+                          <input type="date" class="form-control mb-2 mr-sm-2" id="inlineFormInputName2" placeholder="start date">
+                          <div class="input-group mb-2 mr-sm-4">
+                          </div>
+                   
+  
+                    <button type="submit" class="btn btn-gradient-primary mb-2">Search</button>
+                  </form>
+                      </div>
+                    </div>
+                    <div class="row">
+                      <div class="col-lg-10"></div>
+                      
+                      <div class="col-lg-1">
+                      
+  
+                          <form action="" class="form-inline">
+  
+                          <button type="submit" class="btn btn-gradient-primary mb-12">Export</button>
+                          </form>
+                       
+  
+  
+  
+                      </div>
+                    </div>
+                    <br>
+                      <table class="table table-hover ">
+                      <thead>
+                        <tr>
+                          <th> Account Name </th>
+                          <th> Ref </th>
+                          <th> Assests </th>
+                          <th> Liabilities </th>
+                         
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <td>Capital </td>
+                          <td></td>
+                          <td></td>
+                          <td>100,000,000</td>
+                        </tr>
+                        <tr>
+                          <td>Cash </td>
+                          <td></td>
+                          <td>9,111,000</td>
+                          <td></td>
+                        </tr>
+                        <tr>
+                          <td>Income </td>
+                          <td></td>
+                          <td></td>
+                          <td>100,000</td>
+                        </tr>
+                        <tr>
+                          <td>Loan </td>
+                          <td></td>
+                          <td>900,000</td>
+                          <td></td>
+                        </tr>
+                        <tr>
+                          <td>Current </td>
+                          <td></td>
+                          <td></td>
+                          <td>0</td>
+                        </tr>
+                        <tr>
+                          <td>Saving </td>
+                          <td></td>
+                          <td></td>
+                          <td>1,000</td>
+                        </tr>
+                        <tr>
+                          <td> </td>
+                          <td></td>
+                          <td>10,011,000</td>
+                          <td>100,101,000</td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  
+          </div>
+          </div>
+          </div>
+          </div>
+        </div>
+          <!-- content-wrapper ends -->
+          <!-- partial:../../partials/_footer.html -->
+          <footer th:replace="/fragment/footer.html::footer"></footer>
+          <!-- partial -->
+        </div>
+        <!-- main-panel ends -->
+      </div>
+      <!-- page-body-wrapper ends -->
+    </div>
+    <!-- container-scroller -->
+    <!-- plugins:js -->
+    <script src="../../assets/vendors/js/vendor.bundle.base.js"></script>
+    <!-- endinject -->
+    <!-- Plugin js for this page -->
+    <!-- End plugin js for this page -->
+    <!-- inject:js -->
+    <script src="../../assets/js/off-canvas.js"></script>
+    <script src="../../assets/js/hoverable-collapse.js"></script>
+    <script src="../../assets/js/misc.js"></script>
+    <!-- endinject -->
+    <!-- Custom js for this page -->
+    <script src="../../assets/js/file-upload.js"></script>
+    <!-- End custom js for this page -->
+  </body>
+</html>

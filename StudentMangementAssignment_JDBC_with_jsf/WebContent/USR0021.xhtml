@@ -1,0 +1,108 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://xmlns.jcp.org/jsf/html"
+	xmlns:f="http://xmlns.jcp.org/jsf/core"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:p="http://primefaces.org/ui">
+<h:head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<title>(USR001)login</title>
+	<h:outputStylesheet name="/stylesheets/base.css" />
+	<h:outputStylesheet name="/stylesheets/container.css" />
+	<h:outputStylesheet name="/stylesheets/bootstrap.min.css" />
+	<h:outputScript library="javascript" name="accordion-menu.js"
+		target="head" />
+	<h:outputScript library="javascript" name="general.js" target="head" />
+
+	<h:outputStylesheet name="primeicons/primeicons.css"
+		library="primefaces" />
+	<script type="text/javascript">
+		window.history.forward();
+		function noBack() {
+			window.history.forward();
+		}
+	</script>
+	<link type="text/css" rel="stylesheet"
+		href="/rain/javax.faces.resource/components.css.xhtml?ln=primefaces&amp;v=8.0" />
+	<style>
+.inputbox {
+	width: 250px;
+	margin-left: 10px;
+	background-color: blue;
+	border-radius: 9px;
+}
+
+.buttonsave {
+	margin-left: 10px;
+	border-radius: 9px;
+}
+</style>
+
+</h:head>
+<h:body class="main_body">
+	<ui:insert name="header">
+		<ui:include src="/header.xhtml"></ui:include>
+	</ui:insert>
+
+	<div id="container">
+		<div id="left_menu">
+			<!-- menu html code exist the menu function of general.js -->
+		</div>
+		<div id="main_contents">
+			<div id="contents">
+				<h3>User Register</h3>
+				<h:form name="registerForm" id="form">
+					<p:messages id="messages" showDetail="true" closable="true">
+						<p:autoUpdate />
+					</p:messages>
+					<p:panelGrid columns="2" style="width: 700px;"
+						styleClass="ui-noborder">
+						<p:column style="background-color: #fdf2da;">
+							<p:outputLabel value="ID *" />
+						</p:column>
+						<p:column>
+							<p:inputText value="#{user.id}" class="inputbox" />
+						</p:column>
+
+						<p:column>
+							<p:outputLabel value="User Name *" />
+						</p:column>
+						<p:column>
+							<p:inputText value="#{user.name}" class="inputbox" />
+						</p:column>
+						<p:column>
+							<p:outputLabel value="Password *" />
+						</p:column>
+						<p:column>
+							<p:password value="#{user.password}" class="inputbox" />
+						</p:column>
+						<p:column>
+							<p:outputLabel value="Confirmed Password *" />
+						</p:column>
+						<p:column>
+							<p:password value="#{user.confirm}" class="inputbox" />
+						</p:column>
+						<p:column>
+						</p:column>
+						<p:column>
+							<p:commandButton value="Register" update="form"
+								action="#{user.save}" class="buttonsave"
+								style="background-color: green;" icon="pi pi-check" />
+						</p:column>
+					</p:panelGrid>
+					<br />
+				</h:form>
+				<br /> <br /> <br />
+			</div>
+
+		</div>
+
+	</div>
+
+	<div class="footer">
+		<span>Copyright &#169; ACE Inspiration 2016</span>
+	</div>
+</h:body>
+</html>
